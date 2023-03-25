@@ -8,7 +8,7 @@ public class Main {
         Nodo nodo2 = new Nodo(2, nodo4, nodo3);
         Nodo nodo1 = new Nodo(1, nodo2, null);
         System.out.println(sommaNodiAlbero(nodo1));
-        System.out.println(find_val(9, nodo1));
+        System.out.println(find_val(7, nodo1));
 
     }
 
