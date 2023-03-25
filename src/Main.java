@@ -8,7 +8,7 @@ public class Main {
         Nodo nodo2 = new Nodo(2, nodo4, nodo3);
         Nodo nodo1 = new Nodo(1, nodo2, null);
         System.out.println(sommaNodiAlbero(nodo1));
-
+        System.out.println(find_val(9, nodo1));
 
     }
 
@@ -19,5 +19,15 @@ public class Main {
         Nodo b = n.getDestro();
         return n.getDato() + sommaNodiAlbero(a) + sommaNodiAlbero(b);
 
+    }
+
+    static boolean find_val(int val, Nodo n) {
+        if (n == null) {
+            return false;
+        }
+        if (n.getDato() == val) {
+            return true;
+        }
+        return find_val(val, n.getSinistro()) || find_val(val, n.getDestro());
     }
 }
